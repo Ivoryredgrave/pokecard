@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from './components/productCard';
-import { Container, AppBar, Toolbar, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import Grid from '@mui/material/Grid2';
 import Footer from './components/footer';
 import Typewriter from "typewriter-effect";
@@ -12,6 +12,8 @@ import product3 from './assets/images/product3.webp'
 import product4 from './assets/images/product4.webp'
 import product5 from './assets/images/product5.webp'
 import product6 from './assets/images/product6.webp'
+import product7 from './assets/images/product7.webp'
+import product8 from './assets/images/product8.webp'
 
 const App = () => {
   const products = [
@@ -63,6 +65,22 @@ const App = () => {
       condition: 'With club card. Limit 2 offer',
       image: product6,
     },
+    {
+      id: '7',
+      name: 'Product 7',
+      description: 'Description of Product 7.',
+      price: 79.99,
+      condition: 'With club card. Limit 2 offer',
+      image: product7,
+    },
+    {
+      id: '8',
+      name: 'Product 8',
+      description: 'Description of Product 8.',
+      price: 89.99,
+      condition: 'With club card. Limit 2 offer',
+      image: product8,
+    },
   ];
 
   return (
@@ -72,9 +90,8 @@ const App = () => {
           backgroundImage: `url(${pokeBackground})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '400px',
-        }}
-      />
+          height: '400px'
+        }} />
 
       <AppBar position="static">
         <Toolbar>
@@ -95,15 +112,14 @@ const App = () => {
         </Toolbar>
       </AppBar>
 
-      <Container sx={{ py: 4 }}>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} sx={{ justifyContent: 'center' }}>
           {products.map((product) => (
-            <Grid key={product.id} size={{ xs: 2, sm: 4, md: 4 }}>
+            <Grid key={product.id} >
               <ProductCard {...product} />
             </Grid>
           ))}
         </Grid>
-      </Container>
+      
 
       <Footer text="Developed by Ivory 💕" />
     </>

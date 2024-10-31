@@ -4,10 +4,10 @@ import { Card, CardMedia, CardContent, Typography, Box } from '@mui/material';
 
 const ProductCard = React.memo(({ id, name, description, price, condition, image }) => {
   return (
-    <Card sx={{ maxWidth: 345, m: 2 }} key={id}>
+    <Card sx={{ m: 2 }} key={id}>
       <CardMedia
         component="img"
-        height="250"
+        sx={{ width: 350, height: 250 }}
         image={image}
         alt={name}
       />
