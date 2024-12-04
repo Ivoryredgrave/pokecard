@@ -97,13 +97,12 @@ const App = () => {
         <Toolbar>
           <Typography align="center" variant="h5" component="div" sx={{ flexGrow: 1 }}>
             <Typewriter
-
               onInit={(typewriter) => {
                 typewriter
                   .changeDelay(80)
                   .typeString("Welcome to your anime shop!")
                   .deleteAll()
-                  .typeString("Pokestore")
+                  .typeString("Pokecard")
                   .start();
               }}
             />
@@ -119,7 +118,6 @@ const App = () => {
             </Grid>
           ))}
         </Grid>
-      
 
       <Footer text="Developed by Ivory 💕" />
     </>
