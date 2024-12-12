@@ -114,7 +114,7 @@ const App = () => {
                     .changeDelay(80)
                     .typeString("Welcome to your anime shop!")
                     .deleteAll()
-                    .typeString("Pokecard")
+                    .typeString("Productcard")
                     .start();
                 }}
               />
